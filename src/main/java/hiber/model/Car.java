@@ -1,2 +1,4 @@
-package hiber.model;public class Car {
+package hiber.model;
+
+public class Car {
 }
