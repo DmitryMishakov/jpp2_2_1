@@ -1,6 +1,8 @@
 package hiber.config;
 
 import hiber.model.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -54,5 +56,10 @@ public class AppConfig {
       HibernateTransactionManager transactionManager = new HibernateTransactionManager();
       transactionManager.setSessionFactory(getSessionFactory().getObject());
       return transactionManager;
+   }
+
+   @Bean
+   public Logger getInfoLogger() {
+      return LogManager.getLogger();
    }
 }
