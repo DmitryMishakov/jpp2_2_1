@@ -35,4 +35,9 @@ public class UserServiceImp implements UserService {
    public void printUsers(List<User> usersList) {
       usersList.forEach(x -> serviceLog.log(Level.INFO, x.toString()));
    }
+
+   @Override
+   public void printUserByCar(String model, int series) {
+      serviceLog.log(Level.INFO, userDao.getUserByCar(model, series));
+   }
 }
