@@ -22,6 +22,12 @@ public class MainApp {
 
       userService.add(user);
 
+      car = new Car("Lada2", 2);
+      user = new User("User2", "Lastname2", "user2@mail.ru");
+      user.setCar(car);
+
+      userService.add(user);
+
       userService.printUsers(userService.listUsers());
 
       context.close();
